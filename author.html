@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Author page</title>
+ </head>
+<body>
+<h1>Author entry Kalpana</h1>
+<h2>Getting input</h2>
+<form>
+    <div class="mb-3">
+    <label for="auth_pwd">The hidden author name </label>
+    <input type ="password" id="auth_pwd" name="auth_pwd" min=10 max=50 step=2 value="Dickens"> <br>
+</div>
+<div class="mb-3">
+
+    <label for="guess_auth">Guess the author </label>
+    <input type ="text" id="guess_auth" name="guess_auth" autofocus> <br>
+</div>
+    <input class="btn-btn-primary mb-3" type="button" onclick="checkAuthor()" value="Check the guess">
+</form>
+<p id="result">This text will be replaced </p>
+<script> 
+ let good=0
+ let oops=0
+function checkAuthor(){
+    console.log("Getting form values")
+    name1 = document.getElementById("auth_pwd").value
+    name2 = document.getElementById("guess_auth").value
+    confirmed = confirm("Are these the values? "+name1+" and "+name2)
+    
+    out = document.getElementById("result")
+    if(name1==name2){
+       good=good+1
+        alert("You got it right")
+    } else {
+        oops=oops+1
+        alert("Sorry")
+    }
+    out.innerHTML="good count "+good+"  oops count "+oops
+}
+</script>
+</body>
+</html> 
