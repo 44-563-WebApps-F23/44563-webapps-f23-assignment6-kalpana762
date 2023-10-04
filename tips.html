@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+ <title>Tips Page</title>
+<body>
+<h2>Kalpana shows tip amounts</h2>
+
+
+<form>
+    <div class="mb-3">
+      <label for="base_amt">Enter the Base Amount</label>
+      <input type="number" id="base_amt" name="base_amt" min=10 max=50 step=2 value=50>
+    </div>
+    <div class="mb-3">
+      <label for="tip_percent">Enter the Tip Percentage</label>
+      <input type="number" id="tip_percent" name="tip_percent" value=15>
+    </div>
+    <input class="btn btn-success mb-3" type="button" value="Show tip" onclick="tips()">
+</form>
+<p id="result">Calculated tip will be displayed here</p>
+
+<script> 
+
+function tips (){
+    console.log("Getting form values")
+    baseValue = parseFloat(document.getElementById("base_amt").value)
+    tippercent = parseFloat(document.getElementById("tip_percent").value)
+    
+    let toShow=""
+    for(let i=0;i<5;i++)
+    {
+        const tipPercentage = tippercent + i * 4;
+        const calculatedTip = (baseValue * tipPercentage) / 100;
+        toShow += `${tipPercentage}% is ${calculatedTip};` ;
+        
+    }
+    
+    out = document.getElementById("result")
+    out.innerHTML = "Tips are:"+toShow
+}
+</script>
+<hr>
+<h5 class="display-6">Radio buttons that switches between calculations</h5>
+<form>
+    <input type="radio" id="sum" name="ArthOP" value="sum" onclick="chooseOp()">
+    <label for="sum">Sum</label></br>
+  
+    <input type="radio" id="diff" name="ArthOP" value="difference" onclick="chooseOp()">
+    <label for="diff">diff</label></br>
+  
+    <input type="radio" id="mult" name="ArthOP" value="product" onclick="chooseOp()">
+    <label for="mult">mult</label></br>
+
+</form>
+<br>
+<p id="arthimeticop">basic operations result will be displayed here</p>
+<script>
+    function chooseOp ()
+    {
+        console.log("Getting form values")
+        baseValue = parseFloat(document.getElementById("base_amt").value)
+        tipValue = parseFloat(document.getElementById("tip_percent").value)
+        answer = document.getElementById("arthimeticop")
+        if(document.getElementById("sum").checked){
+          answer.innerHTML="Sum of "+baseValue+" and"+tipValue+" is "+(baseValue+tipValue)
+        }
+        else if(document.getElementById("diff").checked){
+          answer.innerHTML="diff of "+baseValue+" and"+tipValue+" is "+(baseValue-tipValue)
+        }
+      
+        else if(document.getElementById("mult").checked){
+            answer.innerHTML="product of "+baseValue+" and"+tipValue+" is "+(baseValue*tipValue)
+        }
+        answer.style.color="#ff0000"
+    }
+</script>
+
+</body>
+</html> 
