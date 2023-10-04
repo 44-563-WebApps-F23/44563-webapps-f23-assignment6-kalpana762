@@ -2,6 +2,6 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 
-Hosted At [Author page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment5-kalpana762/author.html)<br>
-Hosted At [Tips page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment5-kalpana762/tips.html)<br>
-Hosted At [Cruise page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment5-kalpana762/Cruise.html)
+Hosted At [Author page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-kalpana762/author.html)<br>
+Hosted At [Tips page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-kalpana762/tips.html)<br>
+Hosted At [Cruise page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-kalpana762/Cruise.html)
