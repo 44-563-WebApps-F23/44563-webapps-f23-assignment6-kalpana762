@@ -26,9 +26,9 @@
       <label for="guess_auth">Guess the author</label>
       <input type="text" id="guess_auth" name="guess_auth" autofocus><br>
     </div>
-    <input class="btn btn-primary mb-3" type="button" value="Check the guess" onclick="checkAuthor()">
+    <input class="btn btn-primary mb-3" type="button" value="Check the guess" onclick="checkAuthor()" id="checkButton">
 </form>
-      <p id="result">This text will be replaced</p>
+      <p id="out">This text will be replaced</p>
 
 
 <script> 
@@ -49,6 +49,12 @@ function checkAuthor(){
     else{
         oops=oops+1
         alert("Sorry")
+    }
+    if(oops==7)
+    {
+      const checkButton = document.getElementById("checkButton");
+      checkButton.disabled = true;
+      alert("Sorry, ran out of guesses")
     }
     output.innerHTML="good count "+good+"  oops count "+oops
 }
